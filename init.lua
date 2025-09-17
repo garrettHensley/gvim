@@ -1,4 +1,7 @@
 require("config.lazy")
+require("config.options")
+require("config.keymaps")
+require("mason").setup()
 require("oil").setup({
   -- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
   -- Set to false if you want some other plugin (e.g. netrw) to open when you edit directories.
@@ -200,4 +203,8 @@ require("oil").setup({
   keymaps_help = {
     border = "rounded",
   },
+})
+
+vim.diagnostic.config({
+    virtual_text = false,
 })
